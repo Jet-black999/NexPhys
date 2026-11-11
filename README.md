@@ -8,7 +8,7 @@ Site do preparatório para Residência em Física Médica. HTML, CSS e JavaScrip
 4. Quando a implantação terminar, abra o endereço exibido em Settings → Pages. Novos commits na main atualizam o site.
 
 ## Lista de interesse
-Para receber inscrições, crie um formulário com e-mail e seleção pretendida. Cole a URL pública de resposta na constante formularioDeInteresse no fim de app.js. Até configurar esse endereço, a página informa que o cadastro estará disponível em breve.
+O formulário inclui e-mail obrigatório e seleção pretendida opcional. Ao enviar, o navegador valida o e-mail e exibe uma confirmação de demonstração. Os dados são descartados após a interação. A indicação de demonstração aparece junto aos campos.
 
 ## Prévia local
 Abra index.html no navegador. Para testar com um servidor, execute python3 -m http.server 8000 na pasta do projeto e acesse http://localhost:8000.

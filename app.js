@@ -16,12 +16,15 @@ document.querySelector('[data-open]').onclick=()=>dialog.showModal();
 dialog.querySelector('.close').onclick=()=>dialog.close();
 dialog.querySelectorAll('a').forEach(a=>a.onclick=()=>dialog.close());
 
-// Insira a URL pública do formulário de interesse para habilitar o cadastro.
-const formularioDeInteresse = '';
-if (formularioDeInteresse.startsWith('https://')) {
-  const link = document.createElement('a');
-  link.className = 'cta';
-  link.href = formularioDeInteresse;
-  link.textContent = 'Entrar na lista de interesse';
-  document.querySelector('#signup').replaceChildren(link);
-}
+const signup = document.querySelector('#signup');
+const signupStatus = document.querySelector('#signup-status');
+
+signup.addEventListener('submit', event => {
+  event.preventDefault();
+  signupStatus.textContent = 'Demonstração concluída! Obrigada pelo interesse na NexPhys.';
+  signup.reset();
+});
+
+signup.addEventListener('input', () => {
+  signupStatus.textContent = '';
+});
